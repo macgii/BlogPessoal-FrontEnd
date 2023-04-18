@@ -19,7 +19,7 @@ function Home() {
               variant="h3"
               gutterBottom
               color="textPrimary"
-              component="h3"
+              component="h3" 
               align="center"
               className="titulo"
             >
