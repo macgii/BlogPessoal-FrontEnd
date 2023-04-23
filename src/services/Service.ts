@@ -1,10 +1,10 @@
 import axios from "axios";
 
 export const api = axios.create({
-    baseURL: "https://bloggeneration.herokuapp.com"
-})
+  baseURL: "https://blogpessoal-xd3x.onrender.com",
+});
 
-export const login = async(url, dados, setDado) =>{
-    const resposta = await api.post(url, dados)
-    setDado(resposta.data)
-}
+export const login = async (url: string, dados: object, setDado: any) => {
+  const resposta = await api.post(url, dados);
+  setDado(resposta.data.token);
+};

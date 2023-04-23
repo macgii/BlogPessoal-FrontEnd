@@ -53,6 +53,15 @@ function CadastroUsuario() {
               variant="outlined"
               name="confirmarSenha"
               margin="normal"
+              type="password"
+              fullWidth
+            />
+            <TextField
+              id="foto"
+              label="Foto"
+              variant="outlined"
+              name="foto"
+              margin="normal"
               fullWidth
             />
             <Box marginTop={2} textAlign="center">
