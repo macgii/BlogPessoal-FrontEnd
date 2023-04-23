@@ -4,7 +4,7 @@ import { Grid, Box, Typography, TextField } from "@mui/material";
 import { Button } from "@material-ui/core";
 import { Link, useNavigate } from "react-router-dom";
 import useLocalStorage from "react-use-localstorage";
-import { api } from "../../services/Service";
+import { login } from "../../services/Service";
 import UserLogin from "../../models/UserLogin";
 
 function Login() {
@@ -28,18 +28,15 @@ function Login() {
 
   useEffect(() => {
     if (token != "") {
-      history("/home")
+      history("/home");
     }
-  }, [token])
+  }, [token]);
 
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
-
-      const resposta = await api.post("/usuarios/logar", userLogin);
-      setToken(resposta.data.token);
+      await login ("/usuarios/logar", userLogin, setToken);
       alert("Usuário logado com sucesso!");
-
     } catch (error) {
       alert("Usuário ou senha inválidos!");
     }
