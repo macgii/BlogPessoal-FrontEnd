@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import { Height } from "@mui/icons-material";
+import TabPostagem from "../../components/postagem/tabpostagem/TabPostagem";
 
 function Home() {
   return (
@@ -54,7 +55,9 @@ function Home() {
             height="500px"
           />
         </Grid>
-        <Grid xs={12} className="postagem"></Grid>
+        <Grid xs={12} className="postagem">
+          <TabPostagem />
+        </Grid>
       </Grid>
     </>
   );
