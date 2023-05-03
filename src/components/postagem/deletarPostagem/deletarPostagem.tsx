@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {Typography, Button, Card, CardActions, CardContent } from "@material-ui/core"
 import {Box} from '@mui/material';
-import './DeletarPostagem.css';
+import './deletarPostagem.css';
 import {useNavigate, useParams } from 'react-router-dom'
 import useLocalStorage from 'react-use-localstorage';
 import Postagem from '../../../models/Postagem';
